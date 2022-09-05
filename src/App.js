@@ -20,7 +20,6 @@ function App() {
           <Route path='/Register' element={<Register/>} ></Route> 
 
 
-          {/* jvkhb */}
           
         </Routes>
         </div>
