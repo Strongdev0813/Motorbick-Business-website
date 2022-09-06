@@ -1,0 +1,47 @@
+[
+  {
+    "src": "https://images.ctfassets.net/x7j9qwvpvr5s/3SH18J28QdaF37Pf7zDoyn/89348e03f2bd40d5059ad69485dfd527/MY23-Ducati-Streetfighter-Lamborghini-Model-Blocks-630x390.png",
+    "name": "Ducati Streetfighter V4 Lamborghini",
+    "price": "$ 53,200"
+  },
+  {
+    "src": "https://images.ctfassets.net/x7j9qwvpvr5s/SH02gdny9igmzmJDkEtj7/d2416c646de79ca94496414a90a19fdd/MY-22-DesertX-Model-Blocks-630x390.png",
+    "name": "DesertX",
+    "price": "$ 54,444"
+  },
+  {
+    "src": "https://images.ctfassets.net/x7j9qwvpvr5s/3Qd6uyFBdJG1ncF2I0bZBG/a50a902695ac651a00f4d0863711859c/MY-22-Monster-937-plus-Rd-Model-Blocks-630x390-v06.png",
+    "name": "Monster +",
+    "price": "$ 89,679"
+  },
+  {
+    "src": "https://images.ctfassets.net/x7j9qwvpvr5s/1nCKIizDwNLjwFjSPoBBaD/6ed565659a7984c89f00ef4454a75e79/MY-22-Panigale-V4-SP2-Model-Blocks-630x390-v02.png",
+    "name": "Panigale V4 SP2",
+    "price": "$ 67,799"
+  },
+  {
+    "src": "https://images.ctfassets.net/x7j9qwvpvr5s/35BakkRe07iCPsmLQpdRW5/8138ab4aec94495678503e1c2d64d324/MY-22-HYM-950-01-Model-Blocks-630x390-v06.png",
+    "name": "Hypermotard 950",
+    "price": "$ 67,679"
+  },
+  {
+    "src": "https://images.ctfassets.net/x7j9qwvpvr5s/50z2yoRqtEYOCFZ8ATX3ZG/077713ad0c35089bdd7d7d79e3635932/MY-22-MTS-V4-S-Rd-Model-Blocks-630x390-v06.png",
+    "name": "Multistrada V4 S",
+    "price": "$ 78,797"
+  },
+  {
+    "src": "https://images.ctfassets.net/x7j9qwvpvr5s/3XU38GP20poXjMUUIDANxP/7c499ffdf7c7f3952942c5e742e3dd06/MY-22-SF-V2-SG-Model-Blocks-630x390-v07.png",
+    "name": "Streetfighter V2",
+    "price": "$ 56,797"
+  },
+  {
+    "src": "https://images.ctfassets.net/x7j9qwvpvr5s/3ylApicpoYv3AjrfaqVDRp/d34c05cc4e4b01536d3116fc0730b1f4/MY-22-SCR-1100-Tribute-Model-Blocks-630x390.png",
+    "name": "Scrambler 1100 Tribute Pro",
+    "price": "$ 56,790"
+  },
+  {
+    "src": "https://images.ctfassets.net/x7j9qwvpvr5s/1RvUevmAcjNVCMTA98vJVO/eee98a808ce8027797b0337e1c351eeb/MY-22-Diavel-1260-S-BYG-01-Model-Blocks-630x390-v02.png",
+    "name": "Diavel 1260 S",
+    "price": "$ 46,869"
+  }
+]
