@@ -2,6 +2,7 @@
 import './App.css';
 import { Route,  Routes } from 'react-router-dom';
 import Home from './components/Home';
+import 'bootstrap/dist/css/bootstrap.min.css';
 
 import Navbar from './components/Navbar';
 import Products from './components/Products';
@@ -33,4 +34,4 @@ function App() {
 export default App;
 
 
-// mui router formik yup
+// mui router formik yup redux
