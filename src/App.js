@@ -5,6 +5,7 @@ import "bootstrap/dist/css/bootstrap.min.css";
 import Navbar from "./components/Navbar";
 import Register from "./components/Register";
 import TestDrive from "./components/TestDrive";
+import ProductsPage from "./components/ProductsPage"
 function App() {
   return (
     <div className="App">
