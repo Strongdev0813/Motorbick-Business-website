@@ -1,6 +1,7 @@
 import { Field, Formik} from "formik";
 import * as Yup from "yup"
 import Button from '@mui/material/Button';
+import './formichome.css'
 
 
 const FormikHome= ()=>{
@@ -23,8 +24,8 @@ const FormikHome= ()=>{
     return(
         <div>
             <h1>Contact us</h1>
-            <h3>phone:077884048</h3>
-            <h3>email:motorbike@likepro.com</h3>
+            <h3 className="over">phone:077884048</h3>
+            <h3 className="over">email:motorbike@likepro.com</h3>
             <h4>Have a question?</h4>
             <h4>leave your phone </h4>
             <h5>we will call you back</h5>
