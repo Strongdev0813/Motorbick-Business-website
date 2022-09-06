@@ -1,0 +1,13 @@
+.bikeImg {
+  width: 25vw;
+  margin-right: 0%;
+}
+.rowPictures {
+  display: flex;
+  justify-content: space-around;
+}
+.PicturesDiv {
+  display: flex;
+  width: 100vw;
+  flex-wrap: wrap;
+}
