@@ -25,5 +25,3 @@ function App() {
 }
 
 export default App;
-
-// mui router formik yup redux

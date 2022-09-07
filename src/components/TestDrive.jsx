@@ -1,10 +1,12 @@
+import { Link } from "react-router-dom"
+import Book from "./componentsTestdrive/Book"
+import Pick from "./componentsTestdrive/Calend"
 
-
-const TestDrive= ()=>{
+const TestDrive = () => {
     return(
         <div>
-            TestDrive
-           
+            <Pick></Pick>
+            <Book></Book>
         </div>
     )
 }
