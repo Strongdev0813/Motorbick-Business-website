@@ -1,5 +1,32 @@
 .register{
     background-color: brown;
 width: 100vw;
-height: 100vh;
+height: 119vh;
+
 }
+label{
+
+    color: aliceblue;
+}
+span{
+    color: aliceblue;
+}
+.rounded{
+    display: flex;
+    
+    flex-direction: column;
+    align-items: center;
+    
+
+}
+
+@media (max-width: 768px) {
+    .rounded{
+        font-size: xx-small;
+    
+    }   
+    .register{
+        height: 130vh;
+    }
+}
+ 

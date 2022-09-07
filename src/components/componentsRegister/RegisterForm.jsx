@@ -4,7 +4,7 @@ import * as Yup from 'yup';
 import './registerform.css'
 
 const RegisterForm= ()=>{
-    const professions = ['Developer', 'Designer', 'Other'];
+    const professions = ['Male', 'Female', 'Other'];
     const formik = useFormik({
         
         initialValues: {
@@ -34,7 +34,7 @@ const RegisterForm= ()=>{
       })
     return(
         <div className='register'>
-            <br /><br /><br /><br /><br />
+            <br /><br />
                  <div className="bg-blue-300 min-w-screen min-h-screen overflow-x-hidden">
       <form onSubmit={formik.handleSubmit} className="max-w-lg mx-auto bg-brown rounded shadow-lg mt-7 p-3">
       <h1 className='text-3xl mb-3 text-center'>Register</h1>
@@ -57,7 +57,7 @@ const RegisterForm= ()=>{
           )}
         </div>
         <div className='mb-4'>
-          <label for="profession">Profession</label>
+          <label for="profession">Gender</label>
           <select name="profession" id="profession"
             className={`block w-full rounded border py-1 px-2 ${formik.touched.profession && formik.errors.profession ? 'border-red-400' : 'border-gray-300'}`}
             onChange={formik.handleChange} onBlur={formik.handleBlur} value={formik.values.profession} >
@@ -77,7 +77,7 @@ const RegisterForm= ()=>{
             onChange={formik.handleChange} onBlur={formik.handleBlur} value={formik.values.age} /> <br />
            
           {formik.touched.age && formik.errors.age && ( 
-            <span className='text-red-400'>{formik.errors.age}</span>
+            <span className='text-red-400'><br />{formik.errors.age}</span>
           )}
         </div>
         <div className='text-center'>
