@@ -2,11 +2,12 @@ import { Formik } from "formik";
 import * as Yup from "yup";
 import moment from "moment";
 import ColorButtons from "./Btnn";
-import { useSelector, useDispatch } from "react-redux";
-import { selectDate } from "../../redux/InfoSlice";
+import Times from "./Time";
+// import { useSelector, useDispatch } from "react-redux";
+// import { selectDate } from "../../redux/InfoSlice";
 
 const Book = () => {
-    const dates = useSelector(selectDate);
+    // const dates = useSelector(selectDate);
 
   const schema = Yup.object().shape({
     email: Yup.string()
@@ -38,7 +39,7 @@ const Book = () => {
           phoneNumber: "",
           birthDate: "",
           driverLicense: "",
-          chooseDate: "",
+        //   chooseDate: "",
         }}
         onSubmit={(values) => console.log(JSON.stringify(values))}
         validationSchema={schema}
@@ -52,7 +53,7 @@ const Book = () => {
           touched,
         }) => (
           <form onSubmit={handleSubmit} noValidate>
-            <input
+            {/* <input
               type="text"
               disabled
               name="chooseDate"
@@ -60,7 +61,7 @@ const Book = () => {
               onChange={handleChange}
               values={values.chooseDate}
             />
-            <br />
+            <br /> */}
             <input
               type="text"
               name="firstName"

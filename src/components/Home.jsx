@@ -1,5 +1,3 @@
-
-
 import './componentsHome/home.css'
 import AboutHome from "./componentsHome/AboutHome";
 import CaruselHome from './componentsHome/CaruselHome';
