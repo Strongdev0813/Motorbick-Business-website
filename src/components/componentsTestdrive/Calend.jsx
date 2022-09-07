@@ -4,9 +4,23 @@ import "react-calendar/dist/Calendar.css";
 import "./calend.css"
 import Time from "./Time.jsx";
 
+
+
 function Pick() {
   const [date, setDate] = useState(new Date());
   const [showTime, setShowTime] = useState(false);
+  const [times, setTimes] = useState([])
+
+  const changeTimes = () =>{
+    const times_arr = [
+      "12:00",
+      "13:00",
+      "14:00",
+    ]
+    
+    setTimes(times_arr)
+  }
+
   return (
     <div>
       <div className="calendar">
@@ -15,7 +29,7 @@ function Pick() {
           <Calendar
             onChange={setDate}
             value={date}
-            onClickDay={() => setShowTime(true)}
+            onClickDay={() => { changeTimes(); setShowTime(true) } }
           />
         </div>
         <div className="text-center">Selected date: {date.toDateString()}</div>
@@ -34,7 +48,7 @@ function Pick() {
           {date.toDateString()}
         </p>
       )}
-        <Time showTime={showTime} date={date} />;
+        <Time showTime={showTime} date={date} times={times}/>
     </div>
   );
 }
