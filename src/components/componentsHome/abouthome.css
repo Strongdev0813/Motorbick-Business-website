@@ -8,3 +8,22 @@ h3{
     width: 60vw;
 display: inline-table;
 }
+.cardforphone{
+    display: none;
+}
+.imgphone{
+    display: none;
+}
+@media (max-width: 768px) {
+h3{
+    display: inline;
+}
+  .imgphone{
+    display: inline-flex;
+    height: 40vw;
+    width: 71vw;
+}
+
+   
+}
+

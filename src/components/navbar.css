@@ -20,12 +20,9 @@ a{
 h1{
     color: aliceblue;
 }
- .logo{
-    width: 4vw;
-    height: 2vw;
-}
-img{
-   width: 8vw;
+
+.logo{
+   width: 6vw;
 }
 
 a:hover{
@@ -33,6 +30,13 @@ color: brown;
 }
 a:checked{
     color: coral;
+}
+
+@media (max-width: 768px) {
+
+
+
+   
 }
 
 

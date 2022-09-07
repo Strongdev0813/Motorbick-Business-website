@@ -10,7 +10,7 @@ import FormikHome from './componentsHome/FormikHome';
 const Home= ()=>{
     return(
         <div>
-            <br /><br />
+            <br /><br /><br />
          <AboutHome></AboutHome>
          <br></br><br /><br />
          <CaruselHome></CaruselHome>
