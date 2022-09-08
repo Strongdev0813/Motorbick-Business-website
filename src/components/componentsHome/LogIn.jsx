@@ -1,37 +1,33 @@
 import { Field, Formik} from "formik";
 import * as Yup from "yup"
 import Button from '@mui/material/Button';
-import './formichome.css'
+import './login.css'
 
 
-const FormikHome= ()=>{
+const LogIn= ()=>{
+    
+
+    
     const schema = Yup.object().shape({
-        username: Yup.string()
-        .required("please enter your name")
-        .min(6," must have min 6 digits")
+        email: Yup.string()
+        .required("please enter your email")
+        
        ,
 
         password: Yup.string()
-        .required("phone is required")
-        .min(10,"Your phone number should have 10 charecters")
-        .max(10,"Your phone number should have 10 charecters")
-        .matches(/^[0-9]+$/, "Must be only digits"),
+        .required("password is required")
+        ,
 
        
         agree: Yup.boolean()
     .oneOf([true], 'You need to accept the terms and conditions')
-    } )
+    } )  
     return(
-        <div>
-            <h1>Contact us</h1>
-            <h3 className="over">phone:077884048</h3>
-            <h3 className="over">email:motorbike@likepro.com</h3>
-            <h4>Have a question?</h4>
-            <h4>leave your phone </h4>
-            <h5>we will call you back</h5>
-         
+        <div className="loginloc">
+       <h3>Log in</h3>
+     
             <Formik
-        initialValues={{ username: "", password: "" ,phoneNumber:"", agree:false}}
+        initialValues={{ email: "", password: "", agree:false}}
         onSubmit={(values) => {
           alert(JSON.stringify(values));
         }}
@@ -40,18 +36,18 @@ const FormikHome= ()=>{
         {({handleSubmit,handleChange,values,errors,handleBlur,touched}) => (
           <form action="" onSubmit={handleSubmit} >
             <input
-              type="text"
-              name="username"
-              placeholder="Your Name"
+              type="email"
+              name="email"
+              placeholder="Email"
               onChange= {handleChange}
-              value= {values.username}
+              value= {values.email}
               onBlur={handleBlur}
               />
-              <p>{errors.username && touched.username && errors.username}</p>
+              <p>{errors.email && touched.email && errors.email}</p>
             <input
-              type="text"
+              type="password"
               name="password"
-              placeholder="Your Phone"
+              placeholder="password"
               onChange= {handleChange}
               value= {values.password}
               onBlur={handleBlur}
@@ -65,14 +61,13 @@ const FormikHome= ()=>{
              <Field type="checkbox" name="agree" id="agree"  />          
              </label>
              <p>{errors.agree && touched.phoneNumber &&  errors.agree}</p>
-            <Button  type="submit" variant="contained" >submit</Button>
-
-            
+            <Button  type="submit" variant="contained" >Log In</Button>
           </form>
         )}
       </Formik>
            
+
         </div>
     )
 }
-export default FormikHome
+export default LogIn

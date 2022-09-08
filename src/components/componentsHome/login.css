@@ -1,0 +1,16 @@
+.loginloc{
+    display: inline-grid;
+    margin-top: 5vw;
+
+}
+
+@media (max-width: 500px) {
+
+ .loginloc{   
+font-size: 4vw;
+ }
+ button{
+
+    font-size: xx-small;
+ }
+}

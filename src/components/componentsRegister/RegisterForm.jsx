@@ -3,18 +3,20 @@ import { useFormik } from 'formik';
 import * as Yup from 'yup';
 import './registerform.css'
 
-const RegisterForm= ()=>{
+
+const RegisterForm= (props)=>{
     const professions = ['Male', 'Female', 'Other'];
     const formik = useFormik({
         
         initialValues: {
           name: '',
           email: '',
+          password:'',
           profession: professions[0],
           age: '',
         },
         onSubmit: function (values) {
-          alert(`You are registered! Name: ${values.name}. Email: ${values.email}. Profession: ${values.profession}. 
+          alert(`You are registered! Name: ${values.name}. Email: ${values.email}. gender: ${values.profession}. 
             Age: ${values.age}`);
        
         },
@@ -28,8 +30,12 @@ const RegisterForm= ()=>{
             profession: Yup.string()
                         .oneOf(professions, 'The profession you chose does not exist'),
             age: Yup.number()
-                  .min(15, 'You need to be older than 15 to register')
-                  .required()
+                  .min(18, 'You need to be older than 18 to register')
+                  .required(),
+            password: Yup.string()
+                  .min(7,"password must have more then 7 digits")      
+                      
+
           })
       })
     return(
@@ -57,6 +63,15 @@ const RegisterForm= ()=>{
           )}
         </div>
         <div className='mb-4'>
+          <label for="password">Password</label>
+          <input type="password" name="password" id="password"
+            className={`block w-full rounded border py-1 px-2 ${formik.touched.password && formik.errors.password ? 'border-red-400' : 'border-gray-300'}`}
+            onChange={formik.handleChange} onBlur={formik.handleBlur} value={formik.values.password} />
+          {formik.touched.password && formik.errors.password && (
+            <span className='text-red-400'>{formik.errors.password}</span>
+          )}
+        </div>
+        <div className='mb-4'>
           <label for="profession">Gender</label>
           <select name="profession" id="profession"
             className={`block w-full rounded border py-1 px-2 ${formik.touched.profession && formik.errors.profession ? 'border-red-400' : 'border-gray-300'}`}
@@ -81,7 +96,7 @@ const RegisterForm= ()=>{
           )}
         </div>
         <div className='text-center'>
-          <Button className='bg-blue-500 rounded p-3 text-white' type='submit'  variant="contained" >Submit</Button>
+          <Button className='bg-blue-500 rounded p-3 text-white' type='submit'  variant="contained"  onClick={()=>{props.setLoad(true)}}>Submit</Button>
         </div>
       </form>
     </div>
