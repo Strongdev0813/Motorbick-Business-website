@@ -11,3 +11,32 @@
 .buttonBuy {
   background-color: black !important;
 }
+#transition-modal-description {
+  display: flex !important;
+  flex-direction: column !important;
+  flex-wrap: wrap !important;
+  justify-content: flex-start !important;
+  align-items: center !important;
+}
+h2#transition-modal-description {
+  text-align: center;
+}
+#LineCheckbox {
+  display: flex;
+}
+#checkboxSentence {
+  color: black !important;
+}
+#h1Buy {
+  color: black !important;
+  text-align: center !important;
+}
+.pInputsYup {
+  color: black !important;
+}
+#fire {
+  display: flex;
+  flex-direction: column;
+  color: rgb(77, 19, 224) !important;
+  font-weight: 800;
+}
