@@ -118,7 +118,6 @@ const Pictures = (props) => {
                       <TextField
                         className="inputCvvCardNum"
                         label="ID"
-                        // onChange={(e) => setCardNum(e.target.value)}
                         name="iD"
                         onChange={handleChange}
                         value={values.iD}
