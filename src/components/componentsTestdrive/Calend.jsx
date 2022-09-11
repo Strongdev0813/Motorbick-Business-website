@@ -13,9 +13,13 @@ function Pick() {
 
   const changeTimes = () =>{
     const times_arr = [
+      "10:00",
+      "11:00",
       "12:00",
       "13:00",
       "14:00",
+      "15:00",
+      "16:00"
     ]
     
     setTimes(times_arr)
@@ -34,7 +38,7 @@ function Pick() {
         </div>
         <div className="text-center">Selected date: {date.toDateString()}</div>
       </div>
-      {date.length > 0 ? (
+      {/* {date.length > 0 ? (
         <p>
           <span>Start:</span>
           {date[0].toDateString()}
@@ -47,7 +51,7 @@ function Pick() {
           <span>Default selected date:</span>
           {date.toDateString()}
         </p>
-      )}
+      )} */}
         <Time showTime={showTime} date={date} times={times}/>
     </div>
   );

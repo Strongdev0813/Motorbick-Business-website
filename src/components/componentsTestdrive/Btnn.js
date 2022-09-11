@@ -6,7 +6,7 @@ import './btnn.css'
 export default function ColorButtons() {
   return (
     <Stack direction="row" spacing={2}>
-      <Button className='btn' type='submit' variant="contained" size="large">BOOK Now</Button>
+      <Button className='btn' type='submit' variant="contained" size="large">book now</Button>
     </Stack>
   );
 }   

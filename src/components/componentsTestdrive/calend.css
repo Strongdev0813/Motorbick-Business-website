@@ -10,9 +10,10 @@
 
 .times button {
   display: block;
-  background-color: #6f48eb;
+  background-color:darkolivegreen;
   color: white;
   margin-top: 5px;
+  border-radius: 30px;
 }
 
 .App-logo {
@@ -100,7 +101,7 @@
 
 .react-calendar__navigation button:enabled:hover,
 .react-calendar__navigation button:enabled:focus {
-  background-color: #e6e6e6;
+  background-color:darkolivegreen;
 }
 
 .react-calendar__navigation button[disabled] {
