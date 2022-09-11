@@ -2,9 +2,13 @@ import { Field, Formik} from "formik";
 import * as Yup from "yup"
 import Button from '@mui/material/Button';
 import './formichome.css'
+import { useDispatch, useSelector } from "react-redux";
+import {  plus,  selectAll } from "../../redux/InfoSlice";
 
 
 const FormikHome= ()=>{
+  const objAll = useSelector(selectAll);
+  const dispatch = useDispatch();
     const schema = Yup.object().shape({
         username: Yup.string()
         .required("please enter your name")
@@ -65,7 +69,7 @@ const FormikHome= ()=>{
              <Field type="checkbox" name="agree" id="agree"  />          
              </label>
              <p>{errors.agree && touched.phoneNumber &&  errors.agree}</p>
-            <Button  type="submit" variant="contained" >submit</Button>
+            <Button  type="submit" variant="contained"  onClick={() => dispatch(plus(values))} >submit</Button>
 
             
           </form>

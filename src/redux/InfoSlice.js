@@ -22,28 +22,31 @@
   
 
 import {createSlice} from "@reduxjs/toolkit";
- export const counterSlice = createSlice({
+ export const InfoSlice = createSlice({
 
     name:'counter',
     initialState:{
-        objAll:{value:"Dan", amount:1234
+        objAll:{value:"", amount:true
     }},
     reducers:{
-        plus:(state)=>{
-            state.objAll.value="hellow word"
+        plus:(state,values)=>{
+            let withOutQuotes=JSON.stringify(values.payload.username)
+            withOutQuotes=withOutQuotes.replace(/(^"|"$)/g, '')
+            state.objAll.value="We will call you "+withOutQuotes
         },
-        minus:(state)=>{
-            state.objAll.value= "Dan"
+        minus:(state,formik)=>{
+            let withOutQuotes =JSON.stringify(formik.payload.values.name)
+            withOutQuotes=withOutQuotes.replace(/(^"|"$)/g, '')
+            state.objAll.value="Hello "+withOutQuotes
 
         },
-        add:(state)=>{
-            state.objAll.amount=state.amount+1
+        change:(state)=>{
+            state.objAll.amount=!state.objAll.amount
         },
     },  
     
  })
- export const {plus ,minus,add} = counterSlice.actions
+ export const {plus ,minus,change} = InfoSlice.actions
 
- export const selectAll = (state)=>state.counter.objAll
-
- export default counterSlice.reducer
+ export const selectAll = (state)=>state.info.objAll
+ export default InfoSlice.reducer

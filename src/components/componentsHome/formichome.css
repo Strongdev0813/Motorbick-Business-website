@@ -1,3 +1,10 @@
 .over{
     font-size:3vw ;
 }
+
+@media (max-width: 768px) {
+input{
+    width: 40vw;
+
+}
+}

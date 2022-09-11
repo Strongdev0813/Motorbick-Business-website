@@ -2,9 +2,17 @@ import Button from '@mui/material/Button';
 import { useFormik } from 'formik';
 import * as Yup from 'yup';
 import './registerform.css'
-
+import {useDispatch, useSelector} from "react-redux"
+import { minus, plus ,change} from "../../redux/InfoSlice"
 
 const RegisterForm= (props)=>{
+  const dispatch = useDispatch()
+
+  function animationAndRedux(){
+   dispatch(minus(formik))
+   dispatch(change())
+   props.setLoad(true)
+  }
     const professions = ['Male', 'Female', 'Other'];
     const formik = useFormik({
         
@@ -96,7 +104,7 @@ const RegisterForm= (props)=>{
           )}
         </div>
         <div className='text-center'>
-          <Button className='bg-blue-500 rounded p-3 text-white' type='submit'  variant="contained"  onClick={()=>{props.setLoad(true)}}>Submit</Button>
+          <Button className='bg-blue-500 rounded p-3 text-white' type='submit'  variant="contained"  onClick={()=>{animationAndRedux()}}>Submit</Button>
         </div>
       </form>
     </div>
