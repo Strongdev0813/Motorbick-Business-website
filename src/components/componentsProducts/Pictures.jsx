@@ -51,6 +51,10 @@ const Pictures = (props) => {
       .max(3, "Your phone number should have 3 charecters")
       .matches(/^[0-9]+$/, "Must be only digits"),
 
+    SelectYear: Yup.date().required("SelectYear is required"),
+
+    SelectMonth: Yup.string().required("SelectYear is required"),
+
     agree: Yup.boolean().oneOf(
       [true],
       "You need to accept the terms and conditions"
@@ -93,10 +97,12 @@ const Pictures = (props) => {
                     iD: "",
                     cardNumber: "",
                     cvv: "",
+                    SelectYear: "",
+                    SelectMonth: "",
                     agree: false,
                   }}
                   onSubmit={(values) => {
-                    alert(JSON.stringify(values));
+                    console.log(JSON.stringify(values));
                   }}
                   validationSchema={schema}
                 >
@@ -124,7 +130,6 @@ const Pictures = (props) => {
                       <TextField
                         className="inputAddCardNum"
                         label="Card Number"
-                        // onChange={(e) => setCardNum(e.target.value)}
                         name="cardNumber"
                         onChange={handleChange}
                         value={values.cardNumber}
@@ -147,10 +152,32 @@ const Pictures = (props) => {
                       <p className="pInputsYup">
                         {errors.cvv && touched.cvv && errors.cvv}
                       </p>
-                      <SelectYear></SelectYear>
-                      <SelectMonth></SelectMonth>
+                      <SelectYear
+                        name="SelectYear"
+                        onChange={handleChange}
+                        value={values.SelectYear}
+                        onBlur={handleBlur}
+                      ></SelectYear>
+                      <p className="pInputsYup">
+                        {errors.SelectYear &&
+                          touched.SelectYear &&
+                          errors.SelectYear}
+                      </p>
+                      <SelectMonth
+                        name="SelectMonth"
+                        onChange={handleChange}
+                        value={values.SelectMonth}
+                        onBlur={handleBlur}
+                      ></SelectMonth>
+                      <p className="pInputsYup">
+                        {errors.SelectMonth &&
+                          touched.SelectMonth &&
+                          errors.SelectMonth}
+                      </p>
                       <Checkboxes name="agree" id="agree"></Checkboxes>
-                      <p>{errors.agree && touched.agree && errors.agree}</p>
+                      <p id="pAgree">
+                        {errors.agree && touched.agree && errors.agree}
+                      </p>
                       <Stack spacing={2} direction="row">
                         <div id="fire">
                           <Button

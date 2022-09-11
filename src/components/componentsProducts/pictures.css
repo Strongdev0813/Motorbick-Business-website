@@ -30,13 +30,40 @@ h2#transition-modal-description {
 #h1Buy {
   color: black !important;
   text-align: center !important;
+  font-weight: 800;
 }
 .pInputsYup {
-  color: black !important;
+  color: rgb(247, 8, 8) !important;
 }
 #fire {
   display: flex;
   flex-direction: column;
   color: rgb(77, 19, 224) !important;
   font-weight: 800;
+}
+#pAgree {
+  color: rgb(250, 5, 5) !important;
+}
+
+@media (max-width: 768px) {
+  div.divBikes {
+    display: flex !important;
+    height: 40vw !important;
+    width: 71vw !important;
+    align-items: center !important;
+    flex-direction: column !important;
+    margin-bottom: 10vh !important;
+  }
+  .bikeImg {
+    width: 50vw !important;
+  }
+  .PicturesDiv {
+    justify-content: center;
+  }
+  .css-1wnsr1i {
+    height: 88vh !important;
+    width: 80% !important;
+    top: 50vh !important;
+    left: 50vw !important;
+  }
 }
