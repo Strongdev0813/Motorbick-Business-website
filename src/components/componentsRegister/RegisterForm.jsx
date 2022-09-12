@@ -7,6 +7,8 @@ import { minus, plus ,change} from "../../redux/InfoSlice"
 
 const RegisterForm= (props)=>{
   const dispatch = useDispatch()
+ 
+
 
   function animationAndRedux(){
    dispatch(minus(formik))
@@ -46,6 +48,14 @@ const RegisterForm= (props)=>{
 
           })
       })
+
+      const emailForStorage = formik.values.email
+      const passwordForStorage = formik.values.password
+      const nameForStorage = formik.values.name
+      
+      localStorage.setItem('my-key1', emailForStorage);
+      localStorage.setItem('my-key2', passwordForStorage);
+      localStorage.setItem('my-key3', nameForStorage);
     return(
         <div className='register'>
             <br /><br />

@@ -2,3 +2,6 @@ body{
 
 background-color: brown;    
 }
+.grid-log-out{
+    display: inline-grid;
+}

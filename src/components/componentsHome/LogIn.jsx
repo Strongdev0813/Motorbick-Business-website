@@ -3,7 +3,13 @@ import * as Yup from "yup";
 import Button from "@mui/material/Button";
 import "./login.css";
 
+import { useDispatch } from "react-redux";
+import { change } from "../../redux/InfoSlice";
+
+
 const LogIn = () => {
+  const dispatch = useDispatch()
+  
   const schema = Yup.object().shape({
     email: Yup.string().required("please enter your email"),
 
@@ -13,7 +19,17 @@ const LogIn = () => {
       "You need to accept the terms and conditions"
     ),
   });
+  const emailFromStorage = localStorage.getItem('my-key1');
+  const passwordFromStorage = localStorage.getItem('my-key2');
+  function storageee(values){
+if(emailFromStorage ===values.email && passwordFromStorage === values.password){
+  dispatch(change())
+}
+
+
+  }
   return (
+  
     <div className="loginloc">
       <h3>Log in</h3>
 
@@ -61,13 +77,18 @@ const LogIn = () => {
               <Field type="checkbox" name="agree" id="agree" />
             </label>
             <p>{errors.agree && touched.phoneNumber && errors.agree}</p>
-            <Button type="submit" variant="contained">
+            <Button
+              type="submit"
+              variant="contained"
+             onClick={()=>{storageee(values)}}
+            >
               Log In
             </Button>
+           
           </form>
         )}
       </Formik>
     </div>
-  );
+          );
 };
 export default LogIn;

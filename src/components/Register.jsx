@@ -9,7 +9,7 @@ const Register= ()=>{
       
        <RegisterForm  setLoad={setLoad}></RegisterForm>  
 
-       <AnimationRegister load={load}></AnimationRegister>  
+       <AnimationRegister load={load} setLoad={setLoad}></AnimationRegister>  
         </div>
     )
 }

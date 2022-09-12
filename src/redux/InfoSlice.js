@@ -37,10 +37,12 @@ import {createSlice} from "@reduxjs/toolkit";
         minus:(state,formik)=>{
             let withOutQuotes =JSON.stringify(formik.payload.values.name)
             withOutQuotes=withOutQuotes.replace(/(^"|"$)/g, '')
-            state.objAll.value="Hello "+withOutQuotes
+           if (withOutQuotes.length>0){
+            state.objAll.value="Hello "+withOutQuotes}
 
         },
         change:(state)=>{
+            
             state.objAll.amount=!state.objAll.amount
         },
     },  
