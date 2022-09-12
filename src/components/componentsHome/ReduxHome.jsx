@@ -12,7 +12,7 @@ const ReduxHome = () =>{
 
         <div className="redux">
   
-  <span>{objAll.value}</span>    
+  <span style={{color:"yellow"}}>{objAll.value}</span>    
 
    
         </div>

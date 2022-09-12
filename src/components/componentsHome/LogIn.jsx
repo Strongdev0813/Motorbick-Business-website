@@ -8,19 +8,17 @@ import { change } from "../../redux/InfoSlice";
 
 
 const LogIn = () => {
+  const emailFromStorage = localStorage.getItem('my-key1');
+  const passwordFromStorage = localStorage.getItem('my-key2');
   const dispatch = useDispatch()
   
   const schema = Yup.object().shape({
-    email: Yup.string().required("please enter your email"),
+    email: Yup.string().required("please enter your email").matches(emailFromStorage,"wrong email"),
 
-    password: Yup.string().required("password is required"),
-    agree: Yup.boolean().oneOf(
-      [true],
-      "You need to accept the terms and conditions"
-    ),
+    password: Yup.string().required("password is required").matches(passwordFromStorage,"wrong password"),
+ 
   });
-  const emailFromStorage = localStorage.getItem('my-key1');
-  const passwordFromStorage = localStorage.getItem('my-key2');
+ 
   function storageee(values){
 if(emailFromStorage ===values.email && passwordFromStorage === values.password){
   dispatch(change())
@@ -72,10 +70,7 @@ if(emailFromStorage ===values.email && passwordFromStorage === values.password){
             <p>
               {errors.phoneNumber && touched.phoneNumber && errors.phoneNumber}
             </p>
-            <label htmlFor="agree">
-              agree to the terms
-              <Field type="checkbox" name="agree" id="agree" />
-            </label>
+      
             <p>{errors.agree && touched.phoneNumber && errors.agree}</p>
             <Button
               type="submit"

@@ -58,10 +58,12 @@ const RegisterForm= (props)=>{
       localStorage.setItem('my-key3', nameForStorage);
     return(
         <div className='register'>
-            <br /><br />
+            <br /><br /><br />
+            
                  <div className="bg-blue-300 min-w-screen min-h-screen overflow-x-hidden">
       <form onSubmit={formik.handleSubmit} className="max-w-lg mx-auto bg-brown rounded shadow-lg mt-7 p-3">
       <h1 className='text-3xl mb-3 text-center'>Register</h1>
+      <h4 style={{color:"white"}}> for our Ducati club</h4>
         <div className='mb-4'>
           <label for="name">Full Name</label>
           <input type="text" name="name" id="name" 

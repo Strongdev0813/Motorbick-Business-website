@@ -84,7 +84,7 @@ const BuyProducts = (props) => {
 
       <div id="payBike">
         <Button className="buttonBuy" variant="contained" onClick={handleOpen}>
-          Buy
+         Buy
         </Button>
         {revealTwo && (
           <Modal
@@ -201,8 +201,8 @@ const BuyProducts = (props) => {
                           {errors.agree && touched.agree && errors.agree}
                         </p>
                         <Stack spacing={2} direction="row">
-                          <div id="fire">
-                            <Button type="submit" variant="contained">
+                          <div id="fire" className="buttonbuyy">
+                            <Button  type="submit" variant="contained">
                               pay
                             </Button>
                             {reveal && (

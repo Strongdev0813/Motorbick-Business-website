@@ -5,7 +5,7 @@ import Deck from "./componentsTestdrive/Deck"
 
 const TestDrive = () => {
     return(
-        <div>
+        <div className='testDrive'>
             <br/><br/><br/><br/><br/><br/>
             <Pick></Pick>
             <Deck></Deck>

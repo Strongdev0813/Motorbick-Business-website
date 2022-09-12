@@ -43,7 +43,7 @@ function Deck() {
         api.start(i => {
             if (index !== i) return // We're only interested in changing spring-data for the current spring
             const isGone = gone.has(index)
-            const x = isGone ? (-700 + window.innerWidth) * xDir : active ? mx : 0 // When a card is gone it flys out left or right, otherwise goes back to zero
+            const x = isGone ? (-550 + window.innerWidth) * xDir : active ? mx : 0 // When a card is gone it flys out left or right, otherwise goes back to zero
             const rot = mx / 100 + (isGone ? xDir * 10 * vx : 0) // How much the card tilts, flicking it harder makes it rotate faster
             const scale = active ? 1.1 : 1 // Active cards lift up a bit
             return {

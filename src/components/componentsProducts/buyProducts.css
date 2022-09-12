@@ -34,6 +34,7 @@ h2#transition-modal-description {
 }
 .pInputsYup {
   color: rgb(247, 8, 8) !important;
+  
 }
 #fire {
   display: flex;
@@ -44,6 +45,20 @@ h2#transition-modal-description {
 #pAgree {
   color: rgb(250, 5, 5) !important;
 }
+.buttonbuyy{
+  display: flex !important;
+  justify-content: space-evenly !important;
+}
+.css-e53awj-MuiStack-root {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
+}
+.css-1t8l2tu-MuiInputBase-input-MuiOutlinedInput-input {
+  padding: 1vw !important;
+}
+
+
 
 @media (max-width: 768px) {
   div.divBikes {
@@ -61,9 +76,21 @@ h2#transition-modal-description {
     justify-content: center;
   }
   .css-1wnsr1i {
-    height: 88vh !important;
+    height: 94vh !important;
     width: 80% !important;
     top: 50vh !important;
     left: 50vw !important;
+   
+  }
+  .buttonBuy {
+    font-size: xx-small !important;
+    padding: 0 !important;
+  }
+  .pInputsYup {
+   font-size: 2vw !important;
+    
+  }
+  .css-1t8l2tu-MuiInputBase-input-MuiOutlinedInput-input {
+    padding: 1.5vw ;
   }
 }

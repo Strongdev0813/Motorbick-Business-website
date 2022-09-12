@@ -13,7 +13,7 @@ const FormikHome= ()=>{
     const schema = Yup.object().shape({
         username: Yup.string()
         .required("please enter your name")
-        .min(6," must have min 6 digits")
+        
        ,
 
         password: Yup.string()
