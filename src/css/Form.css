@@ -1,0 +1,64 @@
+.form {
+  display: flex;
+  margin-top: 10px;
+  padding: 20px;
+  flex-direction: column;
+  border: 1px solid #ccc;
+  box-shadow: 0 30px 60px 0 rgba(90, 116, 148, 0.4);
+  color: black !important;
+  /* change autocomplete background style */
+}
+.label {
+  color: black;
+}
+.form .column {
+  display: flex;
+  flex-direction: column;
+}
+.form .row {
+  display: flex;
+  flex-flow: row wrap;
+}
+.form input,
+.form select {
+  margin: 1px 5px 10px 0;
+  padding: 10px 5px 10px 5px;
+  border: 1px solid #ccc;
+  transition: all 0.35s cubic-bezier(0.71, 0.03, 0.56, 0.85);
+}
+.form input:hover,
+.form input:focus,
+.form select:hover,
+.form select:focus {
+  border-color: #3d9cff;
+  box-shadow: 1px 2px 3px 1px rgba(0, 212, 255, 0.4);
+}
+.form input:-webkit-autofill,
+.form input:-webkit-autofill:hover,
+.form input:-webkit-autofill:focus {
+  -webkit-transition: background-color 5000s ease-in-out 0s;
+  transition: background-color 5000s ease-in-out 0s;
+}
+.form select {
+  width: 100px;
+}
+.form .label {
+  font-size: 12px;
+  text-align: left;
+}
+.form button {
+  padding: 5px;
+  background-color: rgb(0, 212, 255);
+  color: white;
+  border: 2px solid rgb(0, 212, 255);
+}
+.form button:hover,
+.form button:focus {
+  border-color: #3d9cff;
+  box-shadow: 1px 2px 3px 1px rgba(0, 212, 255, 0.4);
+}
+.form button:disabled {
+  background: #ccc;
+  border-color: #ccc;
+  box-shadow: none;
+} /*# sourceMappingURL=Form.css.map */

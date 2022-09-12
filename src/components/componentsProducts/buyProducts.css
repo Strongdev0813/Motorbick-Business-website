@@ -2,11 +2,11 @@
   width: 32vw;
   margin-right: 0%;
 }
-.counterPicture {
-  margin-right: 0%;
+.contentPicture {
+  font-weight: bold;
 }
 .pricePicture {
-  margin-right: 0%;
+  font-weight: bold;
 }
 .buttonBuy {
   background-color: black !important;

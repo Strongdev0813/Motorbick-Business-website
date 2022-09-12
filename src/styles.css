@@ -1,0 +1,31 @@
+@import url("https://fonts.googleapis.com/css?family=Source+Code+Pro:400,500,600,700|Source+Sans+Pro:400,600,700&display=swap");
+
+.card {
+  font-family: "Source Sans Pro", sans-serif;
+  text-align: center;
+  box-sizing: border-box;
+  margin: auto;
+  /* width: 400px !important; */
+  height: 300px !important;
+}
+
+@media (min-width: 500px) and (max-height: 400px) {
+  .card {
+    width: 350px;
+    height: 300px;
+  }
+}
+
+@media (min-width: 500px) and (min-height: 401px) {
+  .card {
+    width: 450px;
+    height: 400px;
+  }
+}
+
+@media (min-width: 1000px) and (min-height: 700px) {
+  .card {
+    width: 700px;
+    height: 600px;
+  }
+}

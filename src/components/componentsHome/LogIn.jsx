@@ -3,10 +3,7 @@ import * as Yup from "yup";
 import Button from "@mui/material/Button";
 import "./login.css";
 
-
 const LogIn = () => {
- 
-
   const schema = Yup.object().shape({
     email: Yup.string().required("please enter your email"),
 
@@ -59,13 +56,12 @@ const LogIn = () => {
             <p>
               {errors.phoneNumber && touched.phoneNumber && errors.phoneNumber}
             </p>
-         
+            <label htmlFor="agree">
+              agree to the terms
+              <Field type="checkbox" name="agree" id="agree" />
+            </label>
             <p>{errors.agree && touched.phoneNumber && errors.agree}</p>
-            <Button
-              type="submit"
-              variant="contained"
-             
-            >
+            <Button type="submit" variant="contained">
               Log In
             </Button>
           </form>

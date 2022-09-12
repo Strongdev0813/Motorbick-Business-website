@@ -1,6 +1,5 @@
-import "./componentsProducts/products.css";
-import Pictures from "./componentsProducts/Pictures";
-import TransitionsModal from "./componentsProducts/PayBike";
+import "./componentsProducts/productsPage.css";
+import BuyProducts from "./componentsProducts/BuyProducts";
 import Products from "./Products.json";
 
 const ProductsPage = () => {
@@ -19,11 +18,11 @@ const ProductsPage = () => {
       <div className="PicturesDiv">
         {Data.map((product) => {
           return (
-            <Pictures
+            <BuyProducts
               src={product.src}
               name={product.name}
               price={product.price}
-            ></Pictures>
+            ></BuyProducts>
           );
         })}
       </div>
