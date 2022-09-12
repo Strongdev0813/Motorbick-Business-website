@@ -3,6 +3,8 @@ import Calendar from "react-calendar";
 import "react-calendar/dist/Calendar.css";
 import "./calend.css"
 import Time from "./Time.jsx";
+import {useDispatch, useSelector} from "react-redux"
+import { color} from "../../redux/InfoSlice"
 
 
 
@@ -21,7 +23,6 @@ function Pick() {
       "15:00",
       "16:00"
     ]
-    
     setTimes(times_arr)
   }
 
@@ -38,20 +39,7 @@ function Pick() {
         </div>
         <div className="text-center">Selected date: {date.toDateString()}</div>
       </div>
-      {/* {date.length > 0 ? (
-        <p>
-          <span>Start:</span>
-          {date[0].toDateString()}
-          &nbsp; &nbsp;
-          <span>End:</span>
-          {date[1].toDateString()}
-        </p>
-      ) : (
-        <p>
-          <span>Default selected date:</span>
-          {date.toDateString()}
-        </p>
-      )} */}
+     
         <Time showTime={showTime} date={date} times={times}/>
     </div>
   );

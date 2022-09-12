@@ -1,14 +1,9 @@
 import { Formik } from "formik";
 import * as Yup from "yup";
 import moment from "moment";
-import ColorButtons from "./Btnn";
-
-// import { useSelector, useDispatch } from "react-redux";
-// import { selectDate } from "../../redux/InfoSlice";
+import './book.css'
 
 const Book = () => {
-    // const dates = useSelector(selectDate);
-
   const schema = Yup.object().shape({
     email: Yup.string()
       .required("Enter Email")
@@ -23,14 +18,14 @@ const Book = () => {
       .max(7, "Your License Number Cant Exceed 7 Numbers"),
     birthDate: Yup.string()
       .nullable()
-      .test("birthDate", "You Must Be Over 18,", function (value) {
+      .test("birthDate", "Example 1970-02-08 (Must Be 18)", function (value) {
         return moment().diff(moment(value, "YYYY-MM-DD"), "years") >= 18;
       })
-      .required("Please Enter Your Age"),
+      .required("Please Enter Your Age "),
   });
   return (
     <div>
-      <h4>Book Your Test Drive</h4>
+      <h4 className="headline">Book Your Test Drive</h4>
       <Formik
         initialValues={{
           email: "",
@@ -39,9 +34,10 @@ const Book = () => {
           phoneNumber: "",
           birthDate: "",
           driverLicense: "",
-        //   chooseDate: "",
-        }}
-        onSubmit={(values) => console.log(JSON.stringify(values))}
+        }} 
+        onSubmit={(values) =>
+          alert(`We Have Booked Youre Test-Drive And We Will Make Contact With You Soon`, JSON.stringify(values))
+        }
         validationSchema={schema}
       >
         {({
@@ -53,15 +49,6 @@ const Book = () => {
           touched,
         }) => (
           <form onSubmit={handleSubmit} noValidate>
-            {/* <input
-              type="text"
-              disabled
-              name="chooseDate"
-              placeholder=""
-              onChange={handleChange}
-              values={values.chooseDate}
-            />
-            <br /> */}
             <input
               type="text"
               name="firstName"
@@ -107,7 +94,7 @@ const Book = () => {
             <input
               type="text"
               name="birthDate"
-              placeholder="Birth Date"
+              placeholder="Birthdate(YYYY-MM-DD)"
               onChange={handleChange}
               values={values.birthDate}
             />
@@ -125,7 +112,7 @@ const Book = () => {
             <p style={{ color: "red" }}>
               {errors.email && touched.email && errors.email}
             </p>
-            <ColorButtons></ColorButtons>
+            <button className="book-btn" type="submit">BOOK NOW</button>
           </form>
         )}
       </Formik>

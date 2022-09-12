@@ -24,9 +24,9 @@ function Times(props) {
         )
       })}
       </div>
-      <div>
+      <div className="appointment">
         {info
-          ? `Your appointment is set to ${event} ${props.date.toDateString()}`
+          ? `Your appointment is set to ${event} ${props.date.toDateString()}`+' Complete your testdrive registration with filling the form below'
           : null}
       </div>
     </div>

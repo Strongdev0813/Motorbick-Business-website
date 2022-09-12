@@ -4,16 +4,21 @@
   width: 50%;
 }
 
+.text-center{
+  font-size: x-large;
+  font-weight: bold;
+  color: whitesmoke;
+}
+
 .selected-date {
   margin: 0 auto;
 }
 
-.times button {
-  display: block;
-  background-color:darkolivegreen;
-  color: white;
-  margin-top: 5px;
-  border-radius: 30px;
+@media only screen and (max-width: 768px){
+  .times button{
+    margin: 0px;
+  }
+  
 }
 
 .App-logo {
@@ -47,7 +52,7 @@
   max-width: 100%;
   background: black;
   border: 1px solid #a0a096;
-  font-family: Arial, Helvetica, sans-serif;
+  font-family:Georgia, 'Times New Roman', Times, serif;
   line-height: 10%;
   border-radius: 25px;
   margin-left: 10%;
@@ -59,6 +64,9 @@
   background: none;
   font-size: 16px;
   margin-top: 8px;
+  border-radius: 50px;
+
+  
 }
 
 .react-calendar--doubleView {
@@ -96,15 +104,19 @@
 }
 .react-calendar__navigation button {
   min-width: 44px;
+  border-radius: 30px;
   color: tomato;
+  
 }
 
 .react-calendar__navigation button:enabled:hover,
 .react-calendar__navigation button:enabled:focus {
   background-color:darkolivegreen;
+  border-radius: 30px;
 }
 
 .react-calendar__navigation button[disabled] {
+  border-radius: 30px;
   background-color: #f0f0f0;
 }
 
@@ -112,7 +124,7 @@
   text-align: center;
   text-transform: uppercase;
   font-weight: bold;
-  font-size: 0.75em;
+  font-size: 100%;
   color: wheat;
 }
 
@@ -127,6 +139,8 @@
   font-size: 0.75em;
   font-weight: bold;
   padding: calc(0.75em / 0.75) calc(0.5em / 0.75);
+  border-radius: 30px;
+
 }
 
 .react-calendar__month-view__days__day--weekend {
@@ -147,6 +161,7 @@
   text-align: center;
   padding: 0.75em 0.5em;
   background: none;
+  border-radius: 50px;
 }
 
 .react-calendar__tile:disabled {

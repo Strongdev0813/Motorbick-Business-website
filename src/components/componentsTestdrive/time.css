@@ -5,5 +5,19 @@
 }
 
 .times-list button{
+    display: flex;
+    flex-wrap:wrap-reverse;
+    justify-content: center;
     margin: 0 auto;
+    background-color: #1976d2;
+    color: whitesmoke;
+    border-radius: 50px;
+    width: 20%;
+    height: 15%;
+}
+
+.appointment{
+    font-weight: bold;
+    font-size: x-large;
+    color: whitesmoke;
 }

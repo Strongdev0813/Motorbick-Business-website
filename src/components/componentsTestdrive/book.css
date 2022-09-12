@@ -1,0 +1,16 @@
+.book-btn{
+    border-radius: 20px;
+    background-color: #1976d2;
+    color: whitesmoke;
+    padding: 10px;
+    box-shadow: 5px -5px black;
+    margin-bottom: 2%;
+    font-size: x-large;
+}
+
+.headline{
+    color: ghostwhite;
+    font-size: xxx-large;
+    font-weight: bolder;
+
+}

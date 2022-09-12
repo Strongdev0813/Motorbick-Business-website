@@ -1,7 +1,6 @@
 import { useState } from 'react'
 import { useSprings, animated, to as interpolate } from '@react-spring/web'
 import { useDrag } from '@use-gesture/react'
-
 import styles from './styles.module.css'
 
 
@@ -30,8 +29,6 @@ const from = (_i) => ({ x: 0, rot: 0, scale: 1.5, y: -1000 })
 const trans = (r, s) =>
     `perspective(1500px) rotateX(30deg) rotateY(${r / 10}deg) rotateZ(${r}deg) scale(${s})`
 
-
-
 function Deck() {
 
     const [gone] = useState(() => new Set()) // The set flags all the cards that are flicked out
@@ -46,7 +43,7 @@ function Deck() {
         api.start(i => {
             if (index !== i) return // We're only interested in changing spring-data for the current spring
             const isGone = gone.has(index)
-            const x = isGone ? (200 + window.innerWidth) * xDir : active ? mx : 0 // When a card is gone it flys out left or right, otherwise goes back to zero
+            const x = isGone ? (-700 + window.innerWidth) * xDir : active ? mx : 0 // When a card is gone it flys out left or right, otherwise goes back to zero
             const rot = mx / 100 + (isGone ? xDir * 10 * vx : 0) // How much the card tilts, flicking it harder makes it rotate faster
             const scale = active ? 1.1 : 1 // Active cards lift up a bit
             return {
@@ -61,7 +58,7 @@ function Deck() {
             setTimeout(() => {
                 gone.clear()
                 api.start(i => to(i))
-            }, 600)
+            }, 500)
     })
     // Now we're just mapping the animated values to our view, that's it. Btw, this component only renders once. :-)
     return (
