@@ -6,7 +6,7 @@ import FormikHome from './componentsHome/FormikHome';
 import LogIn from './componentsHome/LogIn';
 import ReduxHome from './componentsHome/ReduxHome';
 import {useDispatch, useSelector} from "react-redux"
-import { minus, plus ,change, objAll,selectAll} from "../redux/InfoSlice"
+import {change, selectAll} from "../redux/InfoSlice"
 import Button from "@mui/material/Button";
 import { useState } from 'react';
 
