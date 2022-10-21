@@ -1,70 +1,102 @@
-# Getting Started with Create React App
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+# Motorbike Front End Project
 
-## Available Scripts
+ React Application for Motorbike  E-commerce site 
 
-In the project directory, you can run:
+ Open source. You are welcome!
 
-### `npm start`
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
 
-The page will reload when you make changes.\
-You may also see any lint errors in the console.
+## Table of Content
 
-### `npm test`
+1. [ Description ](#Description)
+2. [ Netlify Demo ](#Demo)
+3. [ How to Use ](#use)
+4. [ Pictures ](#Pictures)
+5. [ Built with ](#Builtwith)
+6. [ To-do ](#To-do)
+7. [ Authors ](#Author)
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
 
-### `npm run build`
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
+## Description <a name="Description"></a>
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
+ Company E-commerce site project. We made it in a group of three people in a few days.
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
 
-### `npm run eject`
+ We worked on React with the route method and used a bunch of libraries like 
+ 
+ Formik, Redux, Yup, Mui, Bootstrap, and more.
+ 
+  You are welcome to register with our club, book a test drive and even "purchase" a 
+  motorbike. 
 
-**Note: this is a one-way operation. Once you `eject`, you can't go back!**
+The website is responsive.
 
-If you aren't satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
+Appreciate constructive criticism.
 
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you're on your own.
+ 
+## Demo version on netlify <a name="Demo"></a>
+[Motorbike](motorbike-ducati.netlify.app/)
 
-You don't have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn't feel obligated to use this feature. However we understand that this tool wouldn't be useful if you couldn't customize it when you are ready for it.
 
-## Learn More
+## How to use? <a name="use"></a>
 
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
+#### Clone this repository
+$ git clone              
 
-To learn React, check out the [React documentation](https://reactjs.org/).
+#### Go into the repository
 
-### Code Splitting
+$ npm install
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
+$ npm start
 
-### Analyzing the Bundle Size
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
+## Pictures <a name="Pictures"></a>
 
-### Making a Progressive Web App
+### Home Page
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
+![Auctions](https://res.cloudinary.com/dumgi49os/image/upload/v1666351958/samples/gitHub/Screenshot_2022-10-21_at_14-07-38_React_App_nztcdd.png)
 
-### Advanced Configuration
+### Products
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
+![Products](https://res.cloudinary.com/dumgi49os/image/upload/v1666350643/samples/gitHub/Screenshot_2022-10-21_at_14-07-52_React_App_g2iyuv.png)
 
-### Deployment
+### Calendar
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
+![Calendar](https://res.cloudinary.com/dumgi49os/image/upload/v1666350606/samples/gitHub/Screenshot_2022-10-21_at_14-08-50_React_App_fdidsh.png)
 
-### `npm run build` fails to minify
+### Regisretion
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
+![Regisretion](https://res.cloudinary.com/dumgi49os/image/upload/v1666350658/samples/gitHub/Screenshot_2022-10-21_at_14-08-22_React_App_tao7oe.png)
+
+## Mobile support
+The WebApp is compatible with devices of all sizes and all OS's, and consistent improvements are being made.
+
+
+
+## Built with  <a name="Builtwith"></a>
+
+### Front End
+- React
+- Redux
+- Bootstrap
+- Router
+- Formik
+- Yup
+- Mui
+
+
+
+## To-do   <a name="To-do"></a>
+- Improve the calender sytem
+- Make The paying system more complex
+
+
+
+## Authors  <a name="Author"></a>
+
+© [Skandalev ](https://github.com/Skandalev)
+  [Rubi Gorgy](https://github.com/RubyGorgy)
+  [MSPollak]{https://github.com/MSPollak}
+
