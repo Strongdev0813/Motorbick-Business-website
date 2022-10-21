@@ -97,6 +97,8 @@ The WebApp is compatible with devices of all sizes and all OS's, and consistent 
 ## Authors  <a name="Author"></a>
 
 © [Skandalev ](https://github.com/Skandalev)
+
   [Rubi Gorgy](https://github.com/RubyGorgy)
-  [MSPollak]{https://github.com/MSPollak}
+  
+  [MSPollak](https://github.com/MSPollak)
 
